@@ -75,15 +75,15 @@ print(a)  #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 #리스트 컴프리헨션
 array = [i for i in range(10)]
-print(array) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(array) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # 0부터 19까지의 수 중에서 홀수만 포함하는 리스트
 array = [i for i  in range(20) if i % 2 == 1]
-print[array]
+print(array)
 
 # 1부터 9까지의 수들의 제곱 값을 포함하는 리스트
 array = [i * i for i in range(1, 10)]
-print[array]
+print(array)
 
 # 코드 1: 리스트 컴프리헨션
 array = [i for i in range(20) if i % 2 == 1] # 한줄로 작성 가능
@@ -618,7 +618,7 @@ print(result)
 
 result = 0
 
-for i in range(1, 10):
+for i in range(1, 10): 
     if i % 2 == 0:
         continue
     result += i
