@@ -83,7 +83,7 @@ print(array)
 
 # 1부터 9까지의 수들의 제곱 값을 포함하는 리스트
 array = [i * i for i in range(1, 10)]
-print(array)
+print(array) 
 
 # 코드 1: 리스트 컴프리헨션
 array = [i for i in range(20) if i % 2 == 1] # 한줄로 작성 가능
@@ -237,8 +237,8 @@ print(data)
 if '사과' in data:
   print("'사과'를 키로 가지는 데이터가 존재합니다.")
 
-// { '사과': 'Apple', '바나나': 'Banana', '코코넛': 'Coconut', }
-// '사과를 키로 가지는 데이터가 존재한다'
+# { '사과': 'Apple', '바나나': 'Banana', '코코넛': 'Coconut', }
+# '사과를 키로 가지는 데이터가 존재한다'
 
 
 # 사전 잘형 관련 메소드

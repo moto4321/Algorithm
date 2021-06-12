@@ -1,5 +1,13 @@
-first = list(i for i in range(2, 10))  # 리스트 자료형
-second = [i for i in range(2, 10)]     # 배열 자료형
+data = dict()
+data['사과'] = 'Apple'
+data['바나나'] = 'Banana'
+data['코코넛'] = 'Coconut'
 
-print(first)
-print(second)
+print(data)
+
+keyList = data.keys()
+
+for key in keyList:
+    print(data(key))
+
+
