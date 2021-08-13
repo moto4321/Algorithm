@@ -1,14 +1,12 @@
-N = 1264
-K = 3
-count = 0
+data = input()
 
-while True:
-    if N % K == 0:
-        N /= K
-        if N == 0:
-            
-        count += 1
+result = int(data[0])
+
+for i in range(1, len(data)):
+    num = int(data[i])
+    if num <= 1 or result <= 1:
+        result += num
     else:
-        N -= 1
-        count += 1
-print(count)
+        result *= num
+
+print(result)
