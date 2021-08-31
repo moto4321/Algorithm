@@ -60,3 +60,31 @@ a = list(map(int, input().split()))
 for i in range(n):
     if a[i] < x:
         print(a[i], end=" ")
+
+
+
+# 10952
+while True:
+    a, b = map(int, input().split())
+    if a == 0 and b == 0:
+        break
+    print(a + b)
+
+
+
+# 10951
+# 풀이1
+while 1:
+    try:
+        a, b = map(int, input().split())
+        print(a + b)
+    except:
+        break
+
+# 풀이2
+try:
+    while 1:
+        a, b = map(int, input().split())
+        print(a + b)
+except:
+    exit()
