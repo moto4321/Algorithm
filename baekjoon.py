@@ -88,3 +88,47 @@ try:
         print(a + b)
 except:
     exit()
+
+
+
+# 1110 (int 방식)
+n = int(input()) # 68
+
+num = n
+cnt = 0 # 사이클 수
+
+while True:
+    a = num // 10 # 6
+    b = num % 10  # 8
+    c = (a + b) % 10 # 6 + 8 = 1"4"
+    num = b*10 + c
+
+    cnt = cnt + 1
+    if (num == n):
+        break
+
+print(cnt)
+
+# 1110 (str 방식)
+n = input()  # n = "26"
+
+num = n
+cnt = 0
+
+while 1:
+    if len(num) == 1:
+        num = '0' + num
+    plus = str(int(num[0]) + int(num[1])) # 2 + 6 = "8"
+    num = num[-1] + plus[-1]
+    cnt += 1
+    if num == n:
+        print(cnt)
+        break
+
+
+# 10818
+n = input()
+data = list(map(int, input().split()))
+
+print(min(data), max(data))
+
