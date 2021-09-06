@@ -24,3 +24,6 @@ function reducer(state = 초기값, 액션) {  // 여기서 등호가 들어가�
 let store = createStore(reducer)
 
 // reducer는 별거 아니고 그냥 수정된 state를 뱉는 함수
+
+
+<button onClick={() => { props.dispatch({ type : '수량증가' })}}></button>
