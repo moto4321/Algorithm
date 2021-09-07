@@ -1,6 +1,10 @@
-num_list = []
-for i in range(9):
-    num_list.append(int(input()))
-    
-print(max(num_list))
-print(num_list.index(max(num_list))+1)
+# 2577
+
+a = int(input())
+b = int(input())
+c = int(input())
+
+result = list(str(a*b*c))
+
+for i in range(10):
+    print(result.count(str(i)))
