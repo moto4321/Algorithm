@@ -1,7 +1,7 @@
-num_list = []
+arr = []
+for i in range(10):
+    n = int(input())
+    arr.append(n % 42)
 
-for i in range(9):
-    num_list.append(int(input()))
-
-print(max(num_list))
-print(num_list.index(max(num_list))+1)
+arr = set(arr)
+print(len(arr))

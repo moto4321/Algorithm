@@ -151,3 +151,13 @@ result = list(str(a*b*c))
 
 for i in range(10):
     print(result.count(str(i)))
+
+
+# 3052
+arr = []
+for i in range(10):
+    n = int(input())
+    arr.append(n % 42)
+
+arr = set(arr)
+print(len(arr))
