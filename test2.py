@@ -1,7 +1,8 @@
-arr = []
-for i in range(10):
-    n = int(input())
-    arr.append(n % 42)
+n = int(input())
+test_list = list(map(int, input().split()))
+max_score = max(test_list)
 
-arr = set(arr)
-print(len(arr))
+new_list = []
+for score in test_list:
+    new_list.append(score/max_score*100)
+test_avg = sum(new_list)/n

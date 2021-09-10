@@ -1,3 +1,16 @@
-arr = [3, 4, 5, 5, 5, 6, 8, 3]
+n = int(input())
+arr = list(map(int, input().split()))
 
-print(set(arr))
+new = []
+
+m = max(arr)
+pt = 0
+
+for i in range(len(arr)):
+    scr = arr[i]/m*100
+    new.append(scr)
+
+for i in range(len(new)):
+    pt += new[i]
+
+print(pt/n)
