@@ -1,16 +1,16 @@
-n = int(input())
-arr = list(map(int, input().split()))
+def d(n):
+    a = 0
+    for x in list(str(n)):
+        a = a + int(x)
+    return int(n) + a
 
-new = []
+a = []
+for i in range(1, 10001):
+    k = d(i)
+    a.append(k)
 
-m = max(arr)
-pt = 0
-
-for i in range(len(arr)):
-    scr = arr[i]/m*100
-    new.append(scr)
-
-for i in range(len(new)):
-    pt += new[i]
-
-print(pt/n)
+for b in range(1, 10001):
+    if b in a:
+        pass
+    else:
+        print(b)

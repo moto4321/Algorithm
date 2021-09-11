@@ -172,3 +172,38 @@ for score in test_list:
     new_list.append(score/max_score*100)
 test_avg = sum(new_list)/n
 
+
+# 8958
+a = int(input())
+for _ in range(a):
+    ox = input()
+    score = 0
+    cnt = 0
+    for i in range(len(ox)):
+        if ox[i] == 'O':
+            cnt += 1
+            score += cnt
+        elif ox[i] == 'X':
+            cnt = 0
+    print(score)
+
+
+# 4344
+n = int(input())
+
+for _ in range(n):
+    nums = list(map(int, input().split()))
+    avg = sum(nums[1:])/nums[0]  # 평균을 구함
+    cnt = 0
+    for score in nums[1:]:
+        if score > avg:
+            cnt += 1  # 평균 이상의 학생 수 
+    rate = cnt/nums[0] * 100
+    print(f'{rate: .3f}%')
+
+# 함수
+# 15596
+def solve(a):
+    return sum(a)
+
+
