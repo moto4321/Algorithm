@@ -247,6 +247,7 @@ for n in range(1, num +1):
 a = input()
 print(ord(a))
 
+ord() : 문자를 아스키코드로 변환시켜줌
 ord() 의 반대는 chr()
 
 # 11710
@@ -269,3 +270,11 @@ total = 0
 for i in range(n) :  # 0부터 n-1까지
     total += int(nums[i])
 print(total)
+
+
+# 10809
+word = input()
+alphabet = list(range(97, 123))
+
+for x in alphabet:
+    print(word.find(chr(x)))

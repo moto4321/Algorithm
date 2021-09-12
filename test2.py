@@ -1,2 +1,3 @@
-n = input()
-print(sum(map(int, input())))
+n = 'a'
+
+print(ord(n))

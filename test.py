@@ -1,9 +1,6 @@
-# 11710
+# 10809
+word = input()
+alphabet = list(range(97, 123))
 
-n = int(input())
-num_list = list(input())
-total = 0
-for num in num_list:
-    total += int(num)
-
-print(total)
+for x in alphabet:
+    print(word.find(chr(x)))
