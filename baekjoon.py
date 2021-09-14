@@ -277,4 +277,17 @@ word = input()
 alphabet = list(range(97, 123))
 
 for x in alphabet:
-    print(word.find(chr(x)))
+    print(word.find(chr(x)), end=" ")
+
+
+# 2675
+n = int(input())
+
+for _ in range(n):
+    cnt, word = input().split()
+    for x in word:
+        print(x*int(cnt), end=' ')
+    print() # 줄넘김??
+
+
+# 1157
