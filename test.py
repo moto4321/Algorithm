@@ -1,8 +1,15 @@
-# 1157
-words = input().upper()
-unique_words = list(set(words))
+n = input()
 
-cnt_list = []
-for x in unique_words:
-    cnt = words.count(x)
-    cnt_list.append(cnt) # count 숫자를 리스트에 append
+li = [
+    [],
+    ['A','B','C'],
+    ['D','E','F'],
+    ['G','H','I'],
+    ['J','K','L'],
+    ['M','N','O'],
+    ['P','Q','R','S'],
+    ['T','U','V'],
+    ['W','X','Y','Z'],
+    []
+]
+

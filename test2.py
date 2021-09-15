@@ -1,7 +1,9 @@
-n = int(input())
+a, b = input().split()
 
-for _ in range(n):
-    cnt, word = input().split()
-    for x in word:
-        print(x*int(cnt), end=' ')
-    print() # 줄넘김??
+a = int(a[::-1])
+b = int(b[::-1])
+
+if a > b:
+    print(a)
+else:
+    print(b)
