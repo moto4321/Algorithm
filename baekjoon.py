@@ -322,3 +322,37 @@ if a > b :
     print(a)
 else :
     print(b)
+
+
+# 5622
+alphabet_list = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
+a = input()
+time = 0
+
+for j in range(len(a)):
+    for i in alphabet_list:
+        if a[j] in i:
+            time += alphabet_list.index(i) + 3
+
+print(time)
+
+
+# 2941
+croa = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+alpha = input()
+
+for t in croa:
+    alpha = alpha.replace(t, '*')
+
+print(len(alpha))
+
+
+# 1316
+result = int(input())
+for _ in range(result):
+    word = input()
+    for i in range(1, len(word)):
+        if word.find(word[i-1]) > word.find(word[i]):
+            result -= 1
+            break
+print(result)
