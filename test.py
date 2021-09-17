@@ -1,8 +1,10 @@
-result = int(input())
-for _ in range(result):
-    word = input()
-    for i in range(1, len(word)):
-        if word.find(word[i-1]) > word.find(word[i]):
-            result -= 1
-            break
-print(result)
+a, b, c = map(int, input().split())
+
+cnt = 0
+
+while True:
+    cnt += 1
+    if a + b*cnt < c*cnt:
+        print(cnt)
+        break
+    
