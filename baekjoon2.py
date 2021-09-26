@@ -78,7 +78,7 @@ for _ in range(t):
     print(f0[-1]) # 가장 마지막 수 출력
 
 
-# 2839
+# 2839 다시 풀기..
 n = int(input()) # 설탕
 
 result = 0 # 봉지 수
@@ -92,3 +92,12 @@ while n >= 0:
     result += 1 # 봉지 추가
 else:
     print(-1) # while문이 거짓이 되면 -1 출력
+
+
+# 10757
+import sys
+a, b = map(int, sys.stdin.readline().split())
+print(a + b)
+
+
+# 1011
