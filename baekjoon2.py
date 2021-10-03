@@ -101,3 +101,22 @@ print(a + b)
 
 
 # 1011
+
+
+# 1978
+n = int(input())
+li = list(map(int, input().split()))
+answer = 0
+
+for i in li:
+    error = 0
+    if i > 1:
+        for j in range(2, i):
+            if i % j == 0:
+                error += 1
+        if error != 0:
+            continue
+        else:
+            answer += 1
+        
+print(answer)
