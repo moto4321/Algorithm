@@ -143,3 +143,15 @@ if len(li) > 0:
     print(min(li))
 else:
     print(-1)
+
+
+
+# 11653
+num = int(input())
+
+while num != 1:
+    for i in range(2, num + 1):
+        if num % i == 0:
+            print(i)
+            num = num // i
+            break
