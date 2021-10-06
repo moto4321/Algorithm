@@ -155,3 +155,29 @@ while num != 1:
             print(i)
             num = num // i
             break
+
+
+# 1929
+import math
+import sys
+input = sys.stdin.readline
+
+def isPrime(num):
+    # 만약 1이라면 소수가 아니므로 false
+    if num == 1: return False
+    
+    # 제곱근까지만 확인
+    sq = int(math.sqrt(num))
+
+    for i in range(2, sq + 1):
+        # 나눠지면 소수가 아님
+        if num % i == 0: return False
+    return True
+
+
+m, n = map(int, input().split())
+
+# m부터 n까지 소수면 소수 출력
+for i in range(m, n + 1):
+    if isPrime(i):
+        print(i)
