@@ -232,3 +232,33 @@ while True:
         if sosu(i):					#sosu함수안에 있는 게 있다면
             cnt += 1					#카운트를 세라
     print(cnt)		#개수를 출력하는 조건에 맞춰 카운트를 출력
+
+# 9020 # 내가 푼거
+import math
+
+n = int(input())
+
+def sosu(x):
+    if x == 0:
+        return False
+    for i in range(2, int(math.sqrt(x) + 1)):
+        if x % i == 0:
+            return False
+    return True
+
+for _ in range(n):
+    num = int(input()) # num 은 짝수
+    a = 0
+    b = 0
+    a = num//2
+    b = num//2
+    while True:
+        if sosu(a) and sosu(b):
+            print(a, b)
+            break
+        else:
+            a -= 1
+            b += 1
+            if sosu(a) and sosu(b):
+                print(a, b)
+                break
