@@ -13,3 +13,5 @@ print(li) # li자체를 바꿈
 li = [ i for i in range(5) ]
 print(list(reversed(li)))  # [4,3,2,1,0]
 print(li)  # [0,1,2,3,4]
+
+# abs(절대값)
