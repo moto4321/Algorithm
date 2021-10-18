@@ -26,3 +26,11 @@ if result == None:
     print("원소가 존재하지 않습니다.")
 else:
     print(result + 1)
+
+# 파이썬 이진탬색 라이브러리
+from bisect import bisect_left, bisect_right
+bisect_left(a, x) # 정렬된 수서를 유지하면서 배열 a에 x를 삽입할 가장 왼쪽 인덱스 반환
+bisect_right(a, x) # 정렬된 수서를 유지하면서 배열 a에 x를 삽입할 가장 오른쪽 인덱스 반환
+
+
+# 파라메트릭 서치(Parametric Search)
