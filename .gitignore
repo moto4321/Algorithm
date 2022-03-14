@@ -1,13 +1,13 @@
 /node_modules
 test.py
-test2.py
-test3.py
-test.js
+note/test2.py
+note/test3.py
+note/test.js
 test2.js
 test3.js
 .vscode
 
-dijkstra.py
+note/dijkstra.py
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/python

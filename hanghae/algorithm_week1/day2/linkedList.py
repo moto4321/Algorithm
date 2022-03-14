@@ -10,6 +10,7 @@ rtan = Person("rtanny")
 rtan.sayhello("wooseok")
 
 # ====================================
+# 연결리스트 구현해보기
 
 class ListNode:
     def __init__(self, val=0, next=None):
