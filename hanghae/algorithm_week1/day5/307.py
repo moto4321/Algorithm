@@ -11,8 +11,6 @@ class Solution:
         for f in freqs:
             heapq.heappush(freqs_heap, (-freqs[f], f))
 
-        print(freqs_heap)
-
         topk = list()
 
         for _ in range(k):
