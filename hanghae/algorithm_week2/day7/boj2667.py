@@ -14,12 +14,12 @@ dy = [0, 1, 0, -1]
 
 print(graph)
 
-danji_list = []
+danji_list = [] # 각 단지의 집 수
 stack = []
-danji_cnt = 0
+danji_cnt = 0   # 전체 단지 수
 for row in range(n):
     for col in range(n):
-        if graph[row][col] != '1':
+        if graph[row][col] != 1:
             continue
 
         danji_cnt += 1
@@ -27,11 +27,11 @@ for row in range(n):
         stack = [(row, col)]
         while stack:
             x, y = stack.pop()
-            graph[x][y] = '0'
+            graph[x][y] = 0
             for i in range(4):
                 nx = x + dx[i]
                 ny = y + dy[i]
-                if nx < 0 or ny < 0 or nx >= n or ny >= n or graph[nx][ny] == '0':
+                if nx < 0 or ny < 0 or nx >= n or ny >= n or graph[nx][ny] == 0:
                     continue
                 stack.append((nx, ny))
                 danji_result += 1
@@ -40,6 +40,58 @@ for row in range(n):
 print(danji_cnt) # 단지 수
 for cnt in danji_list:
     print(cnt)
+
+
+
+
+# bfs 풀이
+from collections import deque
+
+n = int(input())
+
+graph = []
+for _ in range(n):
+    graph.append(list(map(int, input())))
+
+
+# 북, 동, 남, 서
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
+
+danji_list = [] # 각 단지의 집 수
+danji_cnt = 0   # 전체 단지 수
+for row in range(n):
+    for col in range(n):
+        if graph[row][col] != 1:
+            continue
+
+        danji_cnt += 1
+        danji_result = 1 # 각 집의 수 count
+        q = deque([(row, col)])
+        while q:
+            x, y = q.popleft()
+            graph[x][y] = 0  ######
+
+            for i in range(4):
+                nx = x + dx[i]
+                ny = y + dy[i]
+                if nx < 0 or ny < 0 or nx >= n or ny >= n or graph[nx][ny] == 0:
+                    continue
+                q.append((nx, ny))
+                graph[nx][ny] = 0  ## 해결!!!!
+                danji_result += 1
+        danji_list.append(danji_result)
+
+print(danji_cnt) # 단지 수
+# for cnt in sorted(danji_list):
+#     print(cnt)
+print(danji_list)
+
+
+
+
+
+
 
 
 # 재귀함수를 이용한 풀이
