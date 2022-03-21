@@ -23,4 +23,4 @@ def dfs(a):
 
 dfs('JFK')
 # return route[::-1]
-print(route)
+print(route[::-1])

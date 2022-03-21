@@ -24,3 +24,45 @@ while q:
             visited[each] = True
 
 print(count - 1)
+
+
+# dfs 방식
+
+n = int(input())
+m = int(input())
+graph = []
+for i in range(m):
+    a, b = map(int, input().split())
+    graph[a].append(b)
+
+
+# 북, 동, 남, 서
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
+
+for
+
+
+def dfs():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
