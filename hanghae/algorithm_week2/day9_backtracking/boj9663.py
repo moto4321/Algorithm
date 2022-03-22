@@ -28,7 +28,7 @@ print(cnt)
 
 
 
-# 최적화한 풀이!!(안정적으로 통과)
+# 최적화한 풀이!!(안정적으로 통과) - 아직 연습이 필요함
 def backTracking(rowPos):
     global answer
 

@@ -8,7 +8,7 @@ def dfs(num, sum):  # (4, 0)
     if num < sum:
         return
 
-    # 더한 값이 후한 값과 같다면 개수 추가
+    # 더한 값이 구한 값과 같다면 개수 추가
     if num == sum:
         count += 1
         return
