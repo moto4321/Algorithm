@@ -15,7 +15,7 @@ class Solution:
             left = dfs(node.left)
             right = dfs(node.right)
 
-            # 현재 노드가 자식와 동일한 경우 거리 1 증가
+            # 왼쪽자식 노드가 존재하고 현재 노드가 자식와 동일한 경우 거리 1 증가
             if node.left and node.left.val == node.val:
                 left += 1
             else:
@@ -26,8 +26,10 @@ class Solution:
             else:
                 right = 0
 
-            # 왼쪽과 오른쪽 자식 노드 간 거리의 합 최대값이 결과
+            # 왼쪽과 오른쪽 자식 노드 간 거리의 합 최대값이 결과,   result 는 기존 결과
+            # leetcode에서의 경우 왼쪽노드는 0으로 되서 합해질 것
             result = max(result, left + right)
+
             # 자식 노드 상태값 중 큰 값 리턴
             return max(left, right)
 
