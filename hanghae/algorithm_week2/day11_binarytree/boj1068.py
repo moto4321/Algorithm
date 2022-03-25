@@ -22,15 +22,15 @@ print(len(graph))
 
 
 # 정답 풀이
-n = int(input())
+n = int(input())  # 5
 # 각 노드의 부모를 parents에 저장한다.
-parents = list(map(int, input().split()))
-del_node = int(input())
+parents = list(map(int, input().split()))  # -1 0 0 1 1
+del_node = int(input())  # 2
 # tree맵
 tree = {}
 
 # parents를 for문으로 돌면서 삭제할 노드이거나 삭제할 노드를 부모로 둔 노드를 제외하고 tree 에 저장한다.
-for i in range(n):
+for i in range(n): # n = 5
     if i == del_node or parents[i] == del_node:
         continue
     if parents[i] in tree:

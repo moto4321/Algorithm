@@ -9,12 +9,12 @@
 #         self.right = right
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
-        def check(root):
-            if not root:
+        def check(node):
+            if not node:
                 return 0
 
-            left = check(root.left)
-            right = check(root.right)
+            left = check(node.left)
+            right = check(node.right)
 
             # 높이 차이가 나는 경우 -1, 이외에는 높이에 따라 1 증가
             if left == -1 or right == -1 or abs(left - right) > 1:
