@@ -38,17 +38,17 @@ t = int(input())
 
 for _ in range(t):
     n = int(input())
-    phonebook = []
+    phone_list = []
 
     for _ in range(n):
-        phonebook.append(input())
+        phone_list.append(input())
 
-    phonebook.sort(key=str)
+    phone_list.sort(key=str)
 
     flag = True
 
-    for i in range(len(phonebook) - 1):
-        if phonebook[i] == phonebook[i + 1][:len(phonebook[i])]:
+    for i in range(len(phone_list) - 1):
+        if phone_list[i] == phone_list[i + 1][:len(phone_list[i])]:
             flag = False
             break
     if flag:
