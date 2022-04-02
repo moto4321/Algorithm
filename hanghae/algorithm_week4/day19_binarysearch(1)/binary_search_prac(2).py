@@ -28,9 +28,7 @@ class Solution:
                 right = mid
 
         added = nums + nums[:left]
-        print(added)
 
         result = bs(added, left, len(added) - 1)
-        print(result)
 
         return result if result == -1 else result % len(nums)
