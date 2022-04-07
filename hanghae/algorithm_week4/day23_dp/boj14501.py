@@ -13,6 +13,7 @@ for _ in range(n):
     a, b = map(int, input().split())
     lst.append((a, b))
 
+print(lst)
 max_pay = 0
 
 def dp(idx, pay):
