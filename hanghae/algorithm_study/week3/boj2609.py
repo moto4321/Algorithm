@@ -30,7 +30,7 @@ while True:
 print(gcd)
 print(lcm)
 
-# 유클리드 호제법
+# 유클리드 호제법(gcd를 쉽게 구할 수 있음)
 a, b = map(int, input().split())
 
 def gcd(a, b):
