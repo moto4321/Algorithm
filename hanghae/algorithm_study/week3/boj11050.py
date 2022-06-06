@@ -7,4 +7,4 @@ def factorial(x):
         ans *= i
     return ans
 
-print(factorial(n) / factorial(k) / factorial(n - k))
+print(factorial(n) // factorial(k) // factorial(n - k))
