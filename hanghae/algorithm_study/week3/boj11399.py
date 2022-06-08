@@ -1,3 +1,4 @@
+# ATM
 n = int(input())
 lst = list(map(int, input().split()))
 
@@ -11,3 +12,15 @@ for i in range(len(new_lst)):
     answer += each_time
 
 print(answer)
+
+
+# 다른사람 풀이
+n = int(input())
+s = list(map(int, input().split()))
+
+num = 0
+s.sort()
+for i in range(n):
+    for j in range(i + 1):
+        num += s[j]
+print(num)
