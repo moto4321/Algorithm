@@ -21,3 +21,24 @@ for i in range(n):
         dp[start] = lst[i]
 
 print(len(dp) - 1)
+
+
+# keyword : bisect
+
+# bisect를 사용한 풀이
+import sys
+input = sys.stdin.readline
+from bisect import bisect_left
+
+n = int(input())
+lst = list(map(int, input().split()))
+
+dp = [0]
+
+for i in lst:
+    if dp[-1] < i:
+        dp.append(i)
+    else:
+        dp[bisect_left(dp, i)] = i
+
+print(len(dp) - 1)
