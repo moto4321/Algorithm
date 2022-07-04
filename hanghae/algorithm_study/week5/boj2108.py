@@ -10,6 +10,7 @@ lst.sort()
 print(round(sum(lst) / n))
 # 중앙값
 print(lst[len(lst) // 2])
+
 # 최빈값
 temp = [lst[0]]
 last = lst[0]
