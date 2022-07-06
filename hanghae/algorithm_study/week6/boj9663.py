@@ -24,6 +24,8 @@ queen_location = [0] * n
 back_tracking(0)
 print(answer)
 
+
+
 # 또 다른 참고 풀이
 n = int(input())
 
