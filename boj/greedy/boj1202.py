@@ -7,11 +7,11 @@ n, k = map(int, input().split())
 # 2, 1
 
 jewel_list = [list(map(int, input().split())) for _ in range(n)]
-# [[5, 10], [100, 100]]
+# [5, 10], [100, 100]
 bag_list = [int(input()) for _ in range(k)]
 # 11
-jewel_list.sort()
-bag_list.sort()
+jewel_list.sort() # [[5, 10], [100, 100]]
+bag_list.sort() # [11]
 
 result = 0
 temp = []
