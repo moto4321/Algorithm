@@ -21,23 +21,24 @@ for price in string_price:
 print(min_price)
 
 # 정답
-n, m =map(int, input().split())
+n, m = map(int, input().split())
 
-answer = 0
-price_list = []
-
+result = 0
+six_list = []
+one_list = []
 for _ in range(m):
-    price = tuple(map(int, input().split()))
-    price_list.append(price)
+    a, b = map(int, input().split())
+    six_list.append(a)
+    one_list.append(b)
 
-six_list = sorted(price_list, key=lambda x: x[0])
-one_list = sorted(price_list, key=lambda x: x[1])
+six_list.sort()
+one_list.sort()
 
-if six_list[0][0] <= one_list[0][1] * 6:
-    answer = six_list[0][0]
-    if six_list[0][0] < one_list[0][1] * (n % 6):
-        answer = six_list[0][0] * (n // 6 + 1)
+if six_list[0] <= one_list[0] * 6:
+    result = six_list[0] * (n // 6) + one_list[0] * (n % 6)
+    if six_list[0] < one_list[0] * (n % 6):
+        result = six_list[0] * (n // 6 + 1)
 else:
-    answer = one_list[0][1] * n
+    result = one_list[0] * n
 
-print(answer)
+print(result)
