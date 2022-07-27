@@ -1,17 +1,15 @@
 # 1, 2, 3 더하기
-t = int(input())
+import sys
+input = sys.stdin.readline
 
-def sol(n):
-    if n == 1:
-        return 1
-    elif n == 2:
-        return 2
-    elif n == 3:
-        return 3
-    else:
-        return sol(n - 1) + sol(n - 2) + sol(n - 3)
+cache = [0] * 11
+cache[1] = 1
+cache[2] = 2
+cache[3] = 4
 
-for _ in range(t):
-    n = int(input())
-    print(sol(n))
-    
+for i in range(4, 11):
+    cache[i] = sum(cache[i-3:i])
+
+T = int(input())
+for _ in range(T):
+    print(cache[int(input())])
