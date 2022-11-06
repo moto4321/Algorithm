@@ -20,12 +20,14 @@ else:
     print(max(cnt_lst))
     print(cnt_lst.count(max(cnt_lst)))
 
+
+
 # 정답 코드
 import sys
 input = sys.stdin.readline
 
 n, x = map(int, input().split())
-data = list(map(int, input()).split())
+data = list(map(int, input().split()))
 
 if max(data) == 0:
     print('SAD')
@@ -33,7 +35,7 @@ else:
     # value 초기화
     value = sum(data[:x]) # x개씩 나눠서 sum
     max_value = value
-    max_cnt = 0
+    max_cnt = 1
 
     for i in range(x, n):
         # 슬라이딩 윈도우 진행
